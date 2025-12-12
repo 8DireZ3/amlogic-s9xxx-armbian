@@ -12,7 +12,7 @@ on:
       set_release:
         description: "Select OS Release."
         required: false
-        default: "trixie"
+        default: "bookworm"
         type: choice
         options:
           - trixie
@@ -22,7 +22,7 @@ on:
       armbian_board:
         description: "Select device board."
         required: false
-        default: "all"
+        default: "s905x3-x96air-gb"
         type: choice
         options:
           - all
@@ -195,10 +195,11 @@ on:
       armbian_kernel:
         description: "Select kernel version."
         required: false
-        default: "6.1.y_6.12.y"
+        default: "5.10.247"
         type: choice
         options:
           - 5.10.y
+          - 5.10.247
           - 5.15.y
           - 6.1.y
           - 6.6.y
@@ -211,7 +212,7 @@ on:
       auto_kernel:
         description: "Auto use the latest kernel."
         required: false
-        default: true
+        default: false
         type: boolean
       kernel_repo:
         description: "Set the kernel repository."
